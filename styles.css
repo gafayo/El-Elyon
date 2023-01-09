@@ -1,0 +1,71 @@
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark-color: #007F86;
+    --light-color: #96E4E7;
+    --text-color: #EEE;
+}
+
+/* !nav starts from here */
+.nav{
+    width: 100%;
+    /* background: var(--dark-color); */
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+}
+
+.church-logo{
+    color: rgb(13, 0, 13);
+    font-size: 2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.list-of-links{
+    /* border: 2px solid red; */
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.list-of-links .link{
+    text-decoration: none;
+    color: var(--text-color);
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+
+
+/* !hero-section starts from here */
+.hero{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero p{
+    color: var(--text-color);
+    text-transform: capitalize;
+    font-weight: bolder;
+    /* text-align: center; */
+}
+
+.video-bg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+/* !hero-section ends here */
