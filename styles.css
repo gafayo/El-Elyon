@@ -5,7 +5,7 @@
 }
 
 :root{
-    --dark-color: #007F86;
+    --dark-color: #007f86;
     --light-color: #96E4E7;
     --text-color: #EEE;
 }
@@ -13,33 +13,60 @@
 /* !nav starts from here */
 .nav{
     width: 100%;
-    /* background: var(--dark-color); */
-    padding: 1em 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
     position: fixed;
 }
 
 .church-logo{
-    color: rgb(13, 0, 13);
-    font-size: 2rem;
+    color: rgba(247, 95, 1, 0.975);
+    font-size: 1rem;
     font-weight: bolder;
     text-transform: uppercase;
+    align-self: flex-start;
 }
 
 .list-of-links{
-    /* border: 2px solid red; */
-    width: 60%;
+    background: rgba(0, 127, 134, 0.6);
+    width: 65%;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    margin-inline-start: auto;
 }
+
 
 .list-of-links .link{
     text-decoration: none;
     color: var(--text-color);
-    text-transform: capitalize;
-    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border: 2px solid var(--light-color);
+    text-align: center;
+    width: 50%;
+    padding:  0.5em;
+    border-radius: 100px;
+    opacity: 1;
+    
 }
+
+
+.menu-bar{
+    position: absolute;
+    top: 0;
+    right: 1em;
+}
+
+.menu-bar .bar{
+    background: var(--text-color);
+    padding:  0.1rem 0.7rem;
+    display: block;
+    margin-block-start: 0.2em;
+}
+
 
 
 /* !hero-section starts from here */
@@ -56,7 +83,9 @@
     color: var(--text-color);
     text-transform: capitalize;
     font-weight: bolder;
-    /* text-align: center; */
+    font-size: 2rem;
+    display: none;
+    text-align: center;
 }
 
 .video-bg{
@@ -69,3 +98,40 @@
     z-index: -1;
 }
 /* !hero-section ends here */
+
+/* media-queries starts from here */
+@media (min-width: 600px){
+    /* navigation stars from here */
+    .nav{
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+    }
+    .list-of-links{
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0.6rem;
+        background: none;
+        margin-inline-end: 3rem;
+        /* border: 2px solid red; */
+    }
+
+    .list-of-links .link{
+        width: auto;
+        flex-grow: 1;
+        padding: 0.4em 1em;
+    }
+
+    .church-logo{
+        font-size: 1.3rem;
+    }
+
+    .menu-bar{
+        visibility: hidden;
+    }
+
+    .hero p{
+        display: block;
+    }
+}
+/* media-queries ends here */
