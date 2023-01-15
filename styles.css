@@ -36,6 +36,10 @@
     align-items: center;
     height: 100vh;
     margin-inline-start: auto;
+    visibility: hidden;
+}
+.show{
+    visibility: visible;
 }
 
 
@@ -56,8 +60,10 @@
 
 .menu-bar{
     position: absolute;
-    top: 0;
+    top: 1rem;
     right: 1em;
+    border: 3px solid rebeccapurple;
+    /* padding: 3em; */
 }
 
 .menu-bar .bar{
@@ -67,6 +73,20 @@
     margin-block-start: 0.2em;
 }
 
+.first-bar{
+    top: 20px;
+    transform: rotate(40deg) translate(10%, 120%);
+    /* transform: translate(200%); */
+}
+.second-bar{
+    visibility: hidden;
+}
+.third-bar{
+    transform: rotate(140deg) translate(-20%, 180%);
+    top: 2em;
+    left: 2rem;
+
+}
 
 
 /* !hero-section starts from here */
@@ -135,3 +155,7 @@
     }
 }
 /* media-queries ends here */
+
+#output{
+    margin-block-end: 3rem;
+}
