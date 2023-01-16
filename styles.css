@@ -17,6 +17,7 @@
     justify-content: space-evenly;
     align-items: center;
     position: fixed;
+    z-index: 2;
 }
 
 .church-logo{
@@ -119,6 +120,22 @@
 }
 /* !hero-section ends here */
 
+/* !ABOUT STARTS FROM HERE */
+.hero-about{
+    height: 80vh;
+    background: url(images/image02.jpg), rgba(128, 2, 254, 0.6);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-about .title-about{
+    padding: 30vh;
+    color: var(--dark-color);
+    font-size: 2em;
+
+}
+
 /* media-queries starts from here */
 @media (min-width: 600px){
     /* navigation stars from here */
@@ -133,6 +150,7 @@
         gap: 0.6rem;
         background: none;
         margin-inline-end: 3rem;
+        visibility: visible;
         /* border: 2px solid red; */
     }
 
@@ -155,7 +173,3 @@
     }
 }
 /* media-queries ends here */
-
-#output{
-    margin-block-end: 3rem;
-}

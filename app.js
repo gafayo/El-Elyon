@@ -1,10 +1,9 @@
-const bar = document.querySelector('.menu-bar');
-const links = document.querySelector('.list-of-links');
-console.log(bar)
-bar.addEventListener('click', function(){
-    console.log('hos');
-})
+ let bar = document.querySelector('.menu-bar');
+ let links = document.querySelector('.list-of-links');
+ console.log(links)
+ 
 
-// bar.addEventListener('click', ()=>{
-//     console.log('clicked')
-// })
+ bar.addEventListener('click', () => {
+    links.classList.toggle('show')
+ })
+ 
