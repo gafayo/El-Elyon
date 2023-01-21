@@ -127,10 +127,11 @@
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .hero-about .title-about{
-    padding: 30vh;
+    padding: 30vh 0;
     color: var(--dark-color);
     font-size: 2em;
     text-align: center;
@@ -145,13 +146,30 @@
     background-position: center;
 }
 
+.all-about .about-title{
+    text-align: center;
+    font-weight: bolder;
+    text-transform: capitalize;
+    padding: 0.5em;
+}
+
 .all-about .about-content{
     width: 80%;
     max-width: 900px;
-    padding: 2em;
-    border: 2px solid red;
+    font-size: 2rem;
+    padding: 1em 0.5em;
+    letter-spacing: 1px;
+    line-height: 6.5vh;
     margin-left: auto;
     color: var(--text-color);
+    background: rgba(214, 150, 50, 0.3);
+}
+
+/* !Abouto-section starts from here */
+.container{
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 /* media-queries starts from here */
