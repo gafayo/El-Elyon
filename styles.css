@@ -123,7 +123,7 @@
 /* !ABOUT STARTS FROM HERE */
 .hero-about{
     height: 80vh;
-    background: url(images/image02.jpg), rgba(128, 2, 254, 0.6);
+    background: url(images/image07.jpg), rgba(128, 2, 254, 0.6);
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
@@ -133,7 +133,25 @@
     padding: 30vh;
     color: var(--dark-color);
     font-size: 2em;
+    text-align: center;
 
+}
+
+.all-about{
+    background: url(images/image06.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.all-about .about-content{
+    width: 80%;
+    max-width: 900px;
+    padding: 2em;
+    border: 2px solid red;
+    margin-left: auto;
+    color: var(--text-color);
 }
 
 /* media-queries starts from here */
