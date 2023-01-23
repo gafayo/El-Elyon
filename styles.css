@@ -14,22 +14,24 @@
 .nav{
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     position: fixed;
     z-index: 2;
 }
 
+
+nav li{
+    list-style-type: none;
+}
+
 .church-logo{
-    color: rgba(247, 95, 1, 0.975);
-    font-size: 1rem;
-    font-weight: bolder;
-    text-transform: uppercase;
     align-self: flex-start;
+    border-radius: 50%;
+    width: 50px;
 }
 
 .list-of-links{
-    background: rgba(0, 127, 134, 0.6);
     width: 65%;
     display: flex;
     flex-direction: column;
@@ -54,7 +56,7 @@
     width: 50%;
     padding:  0.5em;
     border-radius: 100px;
-    opacity: 1;
+    background-color: var(--dark-color);
     
 }
 
@@ -120,9 +122,12 @@
 }
 /* !hero-section ends here */
 
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (about) */
+
 /* !ABOUT STARTS FROM HERE */
 .hero-about{
-    height: 80vh;
+    height: 90vh;
     background: url(images/image07.jpg), rgba(128, 2, 254, 0.6);
     background-blend-mode: multiply;
     background-repeat: no-repeat;
@@ -131,12 +136,14 @@
 }
 
 .hero-about .title-about{
-    padding: 30vh 0;
-    color: var(--dark-color);
+    padding: 45vh 0;
+    color: var(--text-color);
     font-size: 2em;
     text-align: center;
 
 }
+
+
 
 .all-about{
     background: url(images/image06.jpg);
@@ -167,13 +174,31 @@
 
 /* !Abouto-section starts from here */
 .container{
-    width: 80%;
-    max-width: 900px;
+    width: 90%;
     margin: 0 auto;
+}
+
+.pastor-about{
+    background: rgba(28, 238, 238, 0.2);
+    padding: 2rem;
+}
+
+.pastor-image{
+    height: 100vh;
+    background: url(images/img-4.jpg), rgba(28, 238, 238, 0.2);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-blend-mode: hue;
 }
 
 /* media-queries starts from here */
 @media (min-width: 600px){
+
+    .container{
+        width: 80%;
+        max-width: 600px;
+    }
     /* navigation stars from here */
     .nav{
         justify-content: center;
@@ -192,7 +217,6 @@
 
     .list-of-links .link{
         width: auto;
-        flex-grow: 1;
         padding: 0.4em 1em;
     }
 
@@ -207,5 +231,22 @@
     .hero p{
         display: block;
     }
+
+    /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+    $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$(about starts) */
+    /* !ABOUT STARTS FROM HERE */
+    .pastor-about{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 2rem;
+        background: rgba(28, 238, 238, 0.2);
+    }
+
+    .pastor-image{
+        width: 60%;
+        height: auto;
+    }
+
+    /* !ABOUT ENDS HERE */
 }
 /* media-queries ends here */
