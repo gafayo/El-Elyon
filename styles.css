@@ -57,7 +57,7 @@ nav li{
 
 .list-of-links .link{
     text-decoration: none;
-    color: var(--text-color);
+    color: blue;
     text-transform: uppercase;
     font-size: 1rem;
     border: 2px solid var(--light-color);
@@ -65,7 +65,7 @@ nav li{
     width: 50%;
     padding:  0.5em;
     border-radius: 100px;
-    background-color: var(--dark-color);
+    background-color: var(--text-color);
     
 }
 
