@@ -30,14 +30,20 @@ nav li{
 
 
 .logo-img{
-    align-self: flex-start;
-    background-image: url(images/logo.jpg);
+    background: url(images/logo.jpg), yellow;
+    background-blend-mode: multiply;
     background-repeat: none;
     background-size: cover;
     background-position: center;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
+}
+
+.link-logo{
+    align-self: flex-start;
+    text-decoration: none;
+    margin-top: -.75rem;
 }
 
 .list-of-links{
@@ -49,6 +55,7 @@ nav li{
     height: 100vh;
     margin-inline-start: auto;
     visibility: hidden;
+    background: var(--dark-color);
 }
 .show{
     visibility: visible;
@@ -60,7 +67,7 @@ nav li{
     color: blue;
     text-transform: uppercase;
     font-size: 1rem;
-    border: 2px solid var(--light-color);
+    border: 5px solid var(--light-color);
     text-align: center;
     width: 50%;
     padding:  0.5em;
@@ -75,7 +82,6 @@ nav li{
     top: 1rem;
     right: 1em;
     border: 3px solid rebeccapurple;
-    /* padding: 3em; */
 }
 
 .menu-bar .bar{
@@ -152,7 +158,9 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (about) */
 
 }
 
-
+.order-of-services{
+    padding: 2rem 0;
+}
 
 .all-about{
     background: url(images/image06.jpg);
@@ -187,6 +195,21 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (about) */
     margin: 0 auto;
 }
 
+.col{
+    width: 70%;
+    height: 200px;
+    border: 2px solid red;
+    text-align: center;
+}
+
+.col + .col{
+    margin-top: 2rem;
+}
+
+.col > p{
+    padding: 4rem 0;
+}
+
 .pastor-about{
     background: rgba(28, 238, 238, 0.2);
     padding: 2rem;
@@ -200,6 +223,62 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (about) */
     background-size: cover;
     background-blend-mode: hue;
 }
+
+
+    /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+    $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$(about starts) */
+    /* !ABOUT STARTS FROM HERE */
+    .pastor-about{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 2rem;
+        background: rgba(28, 238, 238, 0.2);
+    }
+
+    .pastor-image{
+        width: 60%;
+        height: auto;
+    }
+
+    /* footer starts from */
+    .footer{
+        background: #000;
+        opacity: .8;
+        color: #ffff00;
+    }
+    .footer li{
+        list-style-type: none;
+    }
+    .footer-container{
+        width: 80%;
+        margin: 0 auto;
+        padding: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .social-mendia ul{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .footer-content ul + ul{
+        margin-top: 2rem;
+    }
+
+    .footer-content ul li{
+        line-height: 2;
+        color: var(--text-color);
+    }
+
+    .footer-content, .footer p{
+        text-align: center;
+    }
+
+
+    /* !ABOUT ENDS HERE */
 
 /* media-queries starts from here */
 @media (min-width: 600px){
@@ -241,21 +320,16 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (about) */
         display: block;
     }
 
-    /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-    $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$(about starts) */
-    /* !ABOUT STARTS FROM HERE */
-    .pastor-about{
+
+    /* footer starts from here */
+    .footer-content{
         display: flex;
-        flex-direction: row-reverse;
-        gap: 2rem;
-        background: rgba(28, 238, 238, 0.2);
+        justify-content: space-around;
     }
 
-    .pastor-image{
-        width: 60%;
-        height: auto;
+    .footer-content ul + ul{
+        margin-top: 0;
     }
-
-    /* !ABOUT ENDS HERE */
+    /* footer ends here */
 }
 /* media-queries ends here */
