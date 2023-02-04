@@ -8,6 +8,7 @@
     --dark-color: #007f86;
     --light-color: #96E4E7;
     --text-color: #EEE;
+    --black-color: #000;
 }
 body{
     font-family: 'Sansita Swashed', cursive;
@@ -122,7 +123,6 @@ nav li{
     text-transform: capitalize;
     font-weight: bolder;
     font-size: 2rem;
-    display: none;
     text-align: center;
 }
 
@@ -157,10 +157,41 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (about) */
     text-align: center;
 
 }
+/* ORDER SERVICE STARTS FROM HERE */
 
 .order-of-services{
-    padding: 2rem 0;
+    padding: 2rem;
+    background: var(--light-color);
 }
+
+.container-of-services{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.col{
+    padding: 0 2rem;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: -15px -10px 25px -15px var(--black-color);
+    text-align: center;
+    color: var(--black-color);
+}
+
+.col + .col{
+    margin-top: 3rem;
+}
+
+.col > p{
+    padding: 4rem 0;
+}
+/* ORDER SERVICE STARTS FROM HERE */
+
+
+
+/* ALL-ABOUT STARTS FROM HERE */
 
 .all-about{
     background: url(images/image06.jpg);
@@ -188,31 +219,13 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (about) */
     color: var(--text-color);
     background: rgba(214, 150, 50, 0.3);
 }
-
-/* !Abouto-section starts from here */
-.container{
-    width: 90%;
-    margin: 0 auto;
-}
-
-.col{
-    width: 70%;
-    height: 200px;
-    border: 2px solid red;
-    text-align: center;
-}
-
-.col + .col{
-    margin-top: 2rem;
-}
-
-.col > p{
-    padding: 4rem 0;
-}
+ 
 
 .pastor-about{
+    width: 100%;
     background: rgba(28, 238, 238, 0.2);
     padding: 2rem;
+    
 }
 
 .pastor-image{
@@ -230,14 +243,14 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (about) */
     /* !ABOUT STARTS FROM HERE */
     .pastor-about{
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: column;
         gap: 2rem;
         background: rgba(28, 238, 238, 0.2);
     }
 
     .pastor-image{
-        width: 60%;
-        height: auto;
+        width: 100%;
+        min-height: 20%;
     }
 
     /* footer starts from */
@@ -280,7 +293,33 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (about) */
 
     /* !ABOUT ENDS HERE */
 
+    .para-section{
+         
+    }
+    .cross-path{
+        width: 20%;
+        margin: 0 auto;
+        height: 50vh;
+        position:relative;
+        background: red;
+        clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);
+    }
+    .para{
+        position: absolute;
+        top: 23%;
+        left: 0;
+        right: 0;
+        font-size: 0.em;
+        padding: 1rem;
+        text-transform: capitalize;
+        color: var(--text-color);
+        text-align: center;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
 /* media-queries starts from here */
+
 @media (min-width: 600px){
 
     .container{
@@ -320,6 +359,20 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (about) */
         display: block;
     }
 
+    /* order-of-serrvices starts from here */
+    .container-of-services{
+        padding: 2rem 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .col + .col{
+        margin-top: 0;
+    }
+
 
     /* footer starts from here */
     .footer-content{
@@ -330,6 +383,22 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (about) */
     .footer-content ul + ul{
         margin-top: 0;
     }
+
+    @media (min-width: 992px){
+        
+    /* pastor-about */
+    .pastor-about{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .pastor-image{
+        width: 70%;
+        height: auto;
+    }
+
+    }
+   
     /* footer ends here */
 }
 /* media-queries ends here */
