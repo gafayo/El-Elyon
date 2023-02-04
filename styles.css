@@ -297,7 +297,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (about) */
          
     }
     .cross-path{
-        width: 20%;
+        width: 50%;
         margin: 0 auto;
         height: 50vh;
         position:relative;
@@ -306,7 +306,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (about) */
     }
     .para{
         position: absolute;
-        top: 23%;
+        top: 25%;
         left: 0;
         right: 0;
         font-size: 0.em;
